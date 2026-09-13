@@ -1,4 +1,4 @@
-# shape-fight
+# Shape Fight
 
 A game about dodging meteors and fighting triangles in space!
 
