@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ca0kla8oo8xbg"]
+
+[ext_resource type="Script" uid="uid://cfgbireqmq0rr" path="res://shape-fight/Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://ypfjye28y0fc" path="res://shape-fight/Icons/playerSprite.png" id="2_cvnsp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_68pkx"]
+radius = 25.0
+
+[node name="player" type="Area2D" unique_id=1052913889]
+position = Vector2(578, 326)
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1763905288]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102003543]
+shape = SubResource("CircleShape2D_68pkx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=466586116]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

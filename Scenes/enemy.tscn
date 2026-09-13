@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bkrc82sqpm3e8"]
+
+[ext_resource type="Script" uid="uid://dppto2ug0qu31" path="res://Scripts/enemy2.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://sgk4lawn3u3q" path="res://Icons/triangle.png" id="1_hghv2"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_68pkx"]
+points = PackedVector2Array(0, -26, -24, 25, 25, 25)
+
+[node name="enemy2" type="CharacterBody2D" unique_id=140447883 groups=["enemy"]]
+script = ExtResource("1_1f0kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1773706463]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_hghv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2106676125]
+shape = SubResource("ConvexPolygonShape2D_68pkx")

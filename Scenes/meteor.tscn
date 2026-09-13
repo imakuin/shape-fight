@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://djenrrcxoi3fw"]
+
+[ext_resource type="Script" uid="uid://c5rjnvyxmtdy1" path="res://Scripts/meteor.gd" id="1_wm1ig"]
+[ext_resource type="Texture2D" uid="uid://1c0vnn211m7v" path="res://Icons/meteor-sheet.png" id="2_wm1ig"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgiwl"]
+atlas = ExtResource("2_wm1ig")
+region = Rect2(0, 0, 43, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq33g"]
+atlas = ExtResource("2_wm1ig")
+region = Rect2(43, 0, 43, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mekeu"]
+atlas = ExtResource("2_wm1ig")
+region = Rect2(86, 0, 43, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1487"]
+atlas = ExtResource("2_wm1ig")
+region = Rect2(129, 0, 43, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68pkx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgiwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aq33g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mekeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1487")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgiwl"]
+radius = 63.953106
+
+[node name="meteor" type="Area2D" unique_id=1272298958 groups=["meteor"]]
+position = Vector2(4, -16)
+script = ExtResource("1_wm1ig")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=800784042]
+rotation = -0.7853982
+scale = Vector2(4.5, 4.5)
+sprite_frames = SubResource("SpriteFrames_68pkx")
+autoplay = "default"
+frame_progress = 0.021010663
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2046430498]
+position = Vector2(36, 6)
+shape = SubResource("CircleShape2D_bgiwl")

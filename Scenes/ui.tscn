@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://dh00wrhg2q343"]
+
+[ext_resource type="Script" uid="uid://x5met8bpgo6r" path="res://shape-fight/Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://ypfjye28y0fc" path="res://shape-fight/Icons/playerSprite.png" id="2_2246s"]
+[ext_resource type="Texture2D" uid="uid://2evwct0criuj" path="res://shape-fight/Icons/wasdKeys.png" id="2_smcll"]
+[ext_resource type="Texture2D" uid="uid://vaa1nodavucd" path="res://shape-fight/Icons/projectile.png" id="3_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://n6tft43rnoiw" path="res://shape-fight/Icons/arrowKeys.png" id="3_ryf15"]
+[ext_resource type="Texture2D" uid="uid://sgk4lawn3u3q" path="res://shape-fight/Icons/triangle.png" id="4_m78vo"]
+[ext_resource type="Texture2D" uid="uid://1c0vnn211m7v" path="res://shape-fight/Icons/meteor-sheet.png" id="5_q7pk6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m78vo"]
+atlas = ExtResource("5_q7pk6")
+region = Rect2(0, 0, 43, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smcll"]
+atlas = ExtResource("5_q7pk6")
+region = Rect2(43, 0, 43, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryf15"]
+atlas = ExtResource("5_q7pk6")
+region = Rect2(86, 0, 43, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmixe"]
+atlas = ExtResource("5_q7pk6")
+region = Rect2(129, 0, 43, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68pkx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m78vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smcll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryf15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmixe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UI" type="Control" unique_id=688158447]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_jxero")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=684521491]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.13725491, 0.70980394)
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="." unique_id=848259339]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -200.0
+offset_right = 100.0
+offset_bottom = -100.00122
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "START"
+
+[node name="Label" type="Label" parent="." unique_id=1660288663]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -106.0
+offset_right = 89.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "MOVE 
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="WasdKeys" type="Sprite2D" parent="Label" unique_id=1516589038]
+position = Vector2(202, 127)
+scale = Vector2(6, 6)
+texture = ExtResource("2_smcll")
+
+[node name="Label2" type="Label" parent="." unique_id=1089596335]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -301.5
+offset_top = 100.0
+offset_right = 301.5
+offset_bottom = 163.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "WELCOME TO SHAPE FIGHT!"
+
+[node name="Label3" type="Label" parent="." unique_id=1021425340]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 218.0
+offset_right = 748.0
+offset_bottom = 263.0
+theme_override_font_sizes/font_size = 32
+text = "SHOOT"
+
+[node name="ArrowKeys" type="Sprite2D" parent="Label3" unique_id=714430016]
+position = Vector2(58, 126)
+scale = Vector2(6, 6)
+texture = ExtResource("3_ryf15")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1994671865]
+position = Vector2(174, 491)
+scale = Vector2(4, 4)
+texture = ExtResource("2_2246s")
+
+[node name="Projectile" type="Sprite2D" parent="." unique_id=2042967995]
+position = Vector2(262, 496)
+scale = Vector2(4, 4)
+texture = ExtResource("3_q7pk6")
+
+[node name="Triangle" type="Sprite2D" parent="." unique_id=1974031857]
+position = Vector2(899, 403)
+scale = Vector2(4, 4)
+texture = ExtResource("4_m78vo")
+
+[node name="Triangle2" type="Sprite2D" parent="." unique_id=368500990]
+position = Vector2(394, 502)
+scale = Vector2(4, 4)
+texture = ExtResource("4_m78vo")
+
+[node name="Triangle3" type="Sprite2D" parent="." unique_id=1413045216]
+position = Vector2(1012, 209)
+scale = Vector2(4, 4)
+texture = ExtResource("4_m78vo")
+
+[node name="Triangle4" type="Sprite2D" parent="." unique_id=2121787982]
+position = Vector2(961, 555)
+scale = Vector2(4, 4)
+texture = ExtResource("4_m78vo")
+
+[node name="Triangle5" type="Sprite2D" parent="." unique_id=1364846130]
+position = Vector2(630, 10)
+scale = Vector2(4, 4)
+texture = ExtResource("4_m78vo")
+
+[node name="MeteorSheet" type="AnimatedSprite2D" parent="." unique_id=1659666720]
+position = Vector2(135, 98)
+scale = Vector2(4.5, 4.5)
+sprite_frames = SubResource("SpriteFrames_68pkx")
+autoplay = "default"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
