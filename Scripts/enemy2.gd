@@ -18,7 +18,7 @@ func _ready() -> void:
 	position = Vector2(randf_range(0, field_size.x), randf_range(0, field_size.y))
 	if player != null:
 		# if enemy spawns too close to player --> queue_free()
-		if player.global_position.distance_to(position) <= 100:
+		if player.global_position.distance_to(position) <= 200:
 			queue_free()
 
 func _physics_process(delta: float) -> void:
